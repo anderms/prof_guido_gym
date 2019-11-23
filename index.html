@@ -1,187 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>    
-    <meta name="viewport" content="width=device-width, initial-scale=1; charset=UTF-8">
-    <style type="text/css">
-      * {
-      	margin: 0;
-        padding: 0;
-      }
-      .imgtopo {
-      	max-width: 50%;
-        height: auto;
-        
-      }
-      .imgcentro{
-      	max-width:50%;
-        height: auto;
-        float: left;
-      }
-      .esquerda {
-      	width: 25%;        
-        float: left;
-        background-color: black;
-      }
-      .direita {
-      	width: 25%;
-        float: left;
-        background-color: black;
-      }
-      .rodape {
-      	width: 100%;        
-        float: left;
-        background-color: grey;
-	color: white;	
-	font-family: 'Verdana';
-	font-size: 12px;	
-	padding-top: 15px;
-      }
-      .menu {
-      	width: 100%;
-        height: 50px;
-        background-color: black; /* Cor de fundo do menu */
-        font-family: 'Arial';	
-      }
-      .menu ul {
-      	list-style: none;
-        position: relative;
-      }
-      .menu ul li {
-      	width: 150px;
-        float: left; /* IMPORTANTE CHECAR A POSIÇÃO EM RELAÇÃO À OUTRAS DIVS */
-      }
-      .menu a {
-      	padding: 15px;
-        display: block;
-        text-decoration: none;
-        text-align: center;
-        background-color: black;
-        color: #fff; /* Deixa o texto com a cor branca */
-      }
-      .menu ul ul {
-      	position: absolute;
-        visibility: hidden;
-      }
-      .menu ul li:hover ul {
-      	visibility: visible;
-      }
-      .menu a:hover {								/* Altera a cor do item ao passar o mouse */
-      	background-color: grey;
-        color: white; /* Altera a cor do texto ao passar o mouse */
-      }
-      .menu ul ul li {							/* Coloca um intem abaixo do outro e cria uma borda de cor clara */
-      	float: none;
-        border-bottom: solid 1px #ccc;
-      }
-      .menu ul ul li a {
-      	background-color: #069; /* um tipo de Azul */
-      }
-      label[for="bt_menu"]{
-      	padding: 5px;
-        background-color: black;
-        color: #fff; /* CONFERIR A COR */
-        font-family: "Arial";
-        text-align: center;
-        font-size: 30px;
-        cursor: pointer;
-        width: 50px;
-        height: 50px;
-      }
-      #bt_menu {
-      	display: none;
-      }
-      label[for="bt_menu"]{
-      	display: none;
-      }
-      
-      @media(max-width: 800px){
-        label[for="bt_menu"]{
-      	display: block;
-      	}
-        
-        #bt_menu:checked ~ .menu{
-        	margin-left: 0;
-        }
-        
-        .menu{
-        	margin-top: 5px;
-          margin-left: -100%;
-          transition: all .4s;
-        }
-        .menu ul li {
-        	width: 100%;
-          float: none;
-        }
-        .menu ul ul {
-        	position: static;
-          overflow: hidden;
-          max-height: 0;
-          transition: all .4s;
-        }
-        .menu ul li:hover ul {
-        	height: auto;
-          max-height: 200px; /* esta altura depende da quantidade de itens do menu */
-        }
-      }
-    </style>
-    <title>Prof. Guido - Academia</title>
-  </head>
-  <body style="background-color: black;">
-    <div>
-      <div style="text-align: center;">
-        <header> <img class="imgtopo" src=".\img/fatias_HD/topo.png"> </header>
-      </div>
-    </div>
-    <div>
-      <div class="esquerda">
-        <p>
-          ...
-        </p>
-      </div>
-      <div> <input id="bt_menu" type="checkbox"> <label for="bt_menu">&#9776;</label>
-      
-      <nav class="menu">
-        <ul>
-          <li><a href="#">Espaço</a></li>
-          <li><a href="#">Aulas</a>
-            <ul>
-              <li><a href="#">Musculação</a></li>
-              <li><a href="#">Spinning</a></li>
-              <li><a href="#">Zumba</a></li>
-              <li><a href="#">Judô</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Planos</a>
-            <ul>
-              <li><a href="#">Mensal</a></li>
-              <li><a href="#">Trimestral</a></li>
-              <li><a href="#">Semestral</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Como chegar?</a></li>
-        </ul>
-      </nav>
-    	</div>      
-    </div>
-    <div class="esquerda">
-      <aside>
-        <p> Banner </p>
-      </aside>
-    </div>
-    <div> <img class="imgcentro" src=".\img/superman.jpg"> </div>
-    <div class="direita">
-      <aside>
-        <p> Banner </p>
-      </aside>
-    </div>
-    <div style="text-align:center" class="rodape">
-      <footer>
-        <p> Funcionamento de Seg. à Sex. das 06h às 23h e Sáb. das 7h às 16h </p><br>
-	<p>(19)3123-4567</p><br>
-	<p>(19)98123-4567 WhatsApp</p><br>
-	<p>atendimento@profguidogym.com</p><br>
-	<p>Rua Mister Arnold, 123, Jd. Hércules</p><br>
-      </footer>
-    </div>
-  </body>
+	<head>
+		<meta charset="utf-8">
+		<title>Prof. Guido Academia</title>
+		<link rel="shortcut icon" href="img/guidofav.png">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/media_queries.css">
+		<link rel="stylesheet" href="css/estilos.css">
+		<link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<img src="img/logo.png" alt="Professor Guido Academia">
+			</div>
+			<div class="menu">
+
+				<div>
+					<a class="menu-abrir" href="#">Menu</a>
+					<a class="menu-fechar" href="#">X</a>
+				</div>					
+
+				<nav>
+					<ul>
+						<li><a href="#">EspaÃ§o</a></li>
+						<li><a href="#">Aulas</a></li>
+						<li><a href="#">Planos</a></li>
+						<li><a href="#">Como chegar?</a></li>
+					</ul>
+				</nav>
+			</div>
+			
+		</header>
+			<div class="slider">
+				<img src="img/superman_format_16x9_50percent.jpg">
+			</div>
+		<footer>
+			<p>Eu sou um rodape</p>
+		</footer>
+
+		<script src="js/menu.js"></script>
+		
+	</body>
 </html>

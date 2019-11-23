@@ -1,0 +1,71 @@
+/* MOBILE FIRST */
+header{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.logo img{
+	width: 360px;
+}
+
+ul,
+.menu-fechar{
+   display: none;
+}
+
+.menu-ativo ul{
+   display: flex;
+   flex-direction: column;
+   transition: 0.5s;
+}
+
+.menu-ativo .menu-fechar{
+   display: inline-block;
+}
+
+.slider img{
+	width: 100%;
+}
+.slider, footer{
+	text-align: center;
+}
+
+footer{
+	width: 100%;
+	position: fixed;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	bottom: 0;
+}
+
+/* DESKTOP */
+@media(min-width: 1366px){
+	header{
+   		display: flex;
+   		flex-direction: row;
+   		justify-content: space-between;
+   	}
+
+      .menu-abrir,
+      .menu-fechar{
+         display: none;
+      }
+   	
+   	.menu li{
+   		display: inline-block;
+   	}
+   	
+   	.menu a{
+   		padding-right: 2rem;
+   	}
+   	
+   	footer{
+   		position: relative;
+   	}
+
+      ul{
+         display: inline-block;
+      }
+      
+}
