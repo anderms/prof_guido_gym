@@ -8,6 +8,14 @@ p, h1, a{
 	font-family: "Russo One", "Arial", sans-serif;
 }
 
+.apresentacao p{
+	line-height: 1.5em;
+}
+
+.apresentacao p::first-letter{
+	font-size: 2em;
+}
+
 footer{
 	background-color: gray;	
 }
